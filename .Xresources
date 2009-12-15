@@ -1,0 +1,33 @@
+! OS X Stuff
+!XTerm*VT100.Translations: #override \
+!<KeyPress> Prior: scroll-back(1,page) \n\
+!<KeyPress> Next: scroll-forw(1,page) \n\
+!Meta <KeyPress> W: quit() \n\
+!Meta <KeyPress> V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+!<BtnUp>: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n\
+
+xterm*rightScrollBar: True
+xterm*background:       black
+xterm*foreground:       white
+
+*loginShell:            true
+
+! Use color for underline attribute
+*VT100*colorULMode: on
+*VT100*underLine: off
+
+! Use color for the bold attribute
+*VT100*colorBDMode: on
+
+! Love scrollback
+*VT100*saveLines: 5000
+*VT100*scrollBar: true
+
+*customization: -color
+
+rxvt*rightScrollBar: True
+rxvt*background:       black
+rxvt*foreground:       white
+urxvt*rightScrollBar: True
+urxvt*background:       black
+urxvt*foreground:       white

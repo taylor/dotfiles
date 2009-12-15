@@ -1,0 +1,52 @@
+startup_message off
+
+gnew chat
+
+msgwait 30
+#exec $HOME/sw/bin/purple_rat.py
+#exec $HOME/sw/bin/ratatat.py
+
+warp on
+#set winname class
+
+defborder 0
+defpadding 0 0 0 0
+defbarpadding 0 0
+
+### Need to set font color or this does not help
+#set bgcolor black
+#set fgcolor white
+
+# fdump/frestore to save and restore current window layout
+
+bind L exec xlock
+bind B banish
+
+bind f exec firefox --remote "openurl(`ratpoison -c getsel`,new-tab)"
+
+unbind b
+bind b exec ratpoison -c "echo `battery`"
+unbind w
+bind w exec $HOME/sw/bin/ratwindows
+
+definekey top s-v ratclick 2
+definekey top s-d rathold down 1
+definekey top s-u rathold up 1
+definekey top s-l ratrelwarp 5 0
+definekey top s-h ratrelwarp -5 0
+definekey top s-k ratrelwarp 0 -5 
+definekey top s-j ratrelwarp 0 5 
+
+#definekey top s-Right gnext
+#definekey top s-Left gprev
+#definekey top s-Right exec ratpoison -c fdump  > $HOME/.ratpoison-currentlayout; ratpoison -c gnext -c other
+#definekey top s-Left exec ratpoison -c gnext -c other
+bind bracketright exec $HOME/sw/bin/save_ratlayout ;  ratpoison -c gnext -c other ; $HOME/sw/bin/restore_ratlayout
+bind bracketleft exec $HOME/sw/bin/save_ratlayout ; ratpoison -c gnext -c other ; $HOME/sw/bin/restore_ratlayout
+definekey top s-Right exec $HOME/sw/bin/save_ratlayout ;  ratpoison -c gnext -c other ; $HOME/sw/bin/restore_ratlayout
+definekey top s-Left exec $HOME/sw/bin/save_ratlayout ; ratpoison -c gnext -c other ; $HOME/sw/bin/restore_ratlayout
+
+# Rpexpose
+addhook switchwin exec rpthumb
+addhook quit exec rpexpose --clean
+bind W exec rpselect

@@ -1,0 +1,15 @@
+source /etc/screenrc
+#caption always "%{Yk} %H %0c:%s %{k}|%{G} %l %{k}|%{W} %-w%{+u}%n %t%{-u}%+w"
+caption always "%{Yk} %H%{k}|%{W}%-w%{+u}%n %t%{-u}%+w"
+#caption always
+#caption string "%{Yk}%H %{Kk}%-w%{kR}%n %t%{-}%+w"
+
+startup_message off
+
+vbell off
+multiuser on
+#shell -$SHELL
+
+
+#### Taylor local
+obuflimit 1024

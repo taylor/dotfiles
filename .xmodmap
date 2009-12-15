@@ -1,0 +1,4 @@
+! Right cmd key for right click
+!keycode 134 = Pointer_Button3
+! Left cmd key for middle click
+!keycode 133 = Pointer_Button2

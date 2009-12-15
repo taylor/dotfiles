@@ -1,0 +1,26 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# suit to get started fast.
+
+[general]
+accounts = CodeCafe
+metadata = ~/Mail/.offlineimap
+maxsyncaccounts = 1
+
+#ui = Curses.Blinkenlights, TTY.TTYUI,
+ui = TTY.TTYUI, Noninteractive.Basic, Noninteractive.Quiet
+
+[Account CodeCafe]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Mail/codecafe
+
+[Repository Remote]
+type = Gmail
+remotehost = imap.googlemail.com
+remoteuser = taylor@codecafe.com
+remotepassfile = ~/.offlineimap-taylor.codecafe.com
+ssl = yes
+realdelete = no
