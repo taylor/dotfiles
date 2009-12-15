@@ -21,6 +21,6 @@ localfolders = ~/Mail/codecafe
 type = Gmail
 remotehost = imap.googlemail.com
 remoteuser = taylor@codecafe.com
-remotepassfile = ~/.offlineimap-taylor.codecafe.com
+remotepassfile = ~/.config/offlineimap/taylor.codecafe.com
 ssl = yes
 realdelete = no
