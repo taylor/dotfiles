@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+#egrep '^....$|^...$' /usr/share/dict/words | ruby -e 'w=STDIN.read.split("\n"); rp=""; while rp.length < 8 ; rp=rp+w[rand(w.length)] ; end ; puts rp.sub("e","3")'
+
+opt={}
+WORDFILE="/usr/share/dict/words"
+
+opt[:minpasslen] = 8
+opt[:secure] = false
+
+# Creating password from words of these sizes
+minwordsize=3
+maxwordsize=5
+
+until ARGV.empty?
+  if ARGV[0] == "-s"
+    opt[:secure] = true
+  elsif ARGV[0] == "-l"
+    if not ARGV[1].nil?
+      opt[:minpasslen] = ARGV[1].to_i
+    end
+    ARGV.shift
+  end
+  ARGV.shift
+end
+
+w=[]
+File.open(WORDFILE).each_line { |l|
+  l.chomp!
+  w << l if l.length <= maxwordsize and l.length >=minwordsize
+}
+
+# TODO: allow more than one password to be created with -n option
+rp=""
+cap=false
+while rp.length < opt[:minpasslen]
+  nw=w[rand(w.length)]
+  if cap
+    nw.capitalize! ; cap=false
+  else
+    cap=true
+  end
+  rp=rp+nw
+end 
+
+if opt[:secure]
+  # TODO: replace random number and placement of alpha with numeric or non-numeric
+  puts rp.gsub("e","3").gsub("o", "0").gsub("i", "1").gsub("A", "@")
+else
+  puts rp
+end
