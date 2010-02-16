@@ -4,13 +4,13 @@ set runtimepath=/home/taylor/.vimperator
 
 " set editor=guivim -f
 "set editor=gvim -f
-"set editor="~/sw/bin/gui_editor -f"
-"set editor="gui_editor -f"
-"au LocationChange .* :set editor="/Users/taylor/sw/bin/gui_editor"
-"au LocationChange .* :set editor="/Users/taylor/sw/bin/gui_editor -f"
-au LocationChange .* :set editor="gui_editor -f"
-au LocationChange s\.codecafe\.com :set editor="gui_editor -f -c 'set ft=mkd'"
-au LocationChange trac\.isgenesis\.com :set editor="gui_editor -f -c 'set ft=mkd'"
+"set editor="~/sw/bin/guieditor -f"
+"set editor="guieditor -f"
+"au LocationChange .* :set editor="/Users/taylor/sw/bin/guieditor"
+"au LocationChange .* :set editor="/Users/taylor/sw/bin/guieditor -f"
+au LocationChange .* :set editor="guieditor -f"
+au LocationChange s\.codecafe\.com :set editor="guieditor -f -c 'set ft=mkd'"
+au LocationChange trac\.isgenesis\.com :set editor="guieditor -f -c 'set ft=mkd'"
 
 source! ~/.vimperatorrc.local
 
