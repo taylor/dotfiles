@@ -1,8 +1,18 @@
 source /etc/screenrc
+
+termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+defhstatus "screen ^A (^Aa) | $USER@^AH"
+#defhstatus "screen ^E (^Et) | $USER@^EH"
+hardstatus off
+
 #caption always "%{Yk} %H %0c:%s %{k}|%{G} %l %{k}|%{W} %-w%{+u}%n %t%{-u}%+w"
 caption always "%{Yk} %H%{k}|%{W}%-w%{+u}%n %t%{-u}%+w"
 #caption always
 #caption string "%{Yk}%H %{Kk}%-w%{kR}%n %t%{-}%+w"
+#
+#
+#hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#hardstatus alwayslastline "%{wk}%-w%{Gk}[%n %t]%{wk}%+w%=%{Ck}%D %d/%m/%Y - %c:%s"
 
 startup_message off
 
@@ -13,3 +23,6 @@ multiuser on
 
 #### Taylor local
 obuflimit 1024
+
+# http://snarfed.org/space/synchronizing%20GNU%20screen%27s%20paste%20buffer%20and%20the%20X%20selection
+#bindkey -m > eval "stuff ' '" writebuf $HOME/.cache/screen-exchange "exec sh -c 'xclip -in < $HOME/.cache/screen-exchange'"
