@@ -10,6 +10,16 @@ xterm*rightScrollBar: True
 xterm*background:       black
 xterm*foreground:       white
 
+Mrxvt*transparent: True
+Mrxvt*shading: 85
+Mrxvt*scrollBar: False
+Mrxvt*autohideTabbar: True
+Mrxvt*xft: True
+Mrxvt*xftFont: Pragmata
+Mrxvt*scrollbarRight: True
+Mrxvt*background:       black
+Mrxvt*foreground:       white
+
 *loginShell:            true
 
 ! Use color for underline attribute
@@ -29,5 +39,28 @@ rxvt*rightScrollBar: True
 rxvt*background:       black
 rxvt*foreground:       white
 urxvt*rightScrollBar: True
-urxvt*background:       black
-urxvt*foreground:       white
+!urxvt*background:       black
+!urxvt*foreground:       white
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0000/dddd
+
+xmessage*form.okay.shapeStyle:        rectangle
+xmessage*form.okay.background:        black
+xmessage*form.okay.foreground:        white
+xmessage*message*background:        black
+xmessage*background:            #111122
+xmessage*foreground:            white
+xmessage*Scrollbar.width:        1
+xmessage*Scrollbar.borderWidth:        0
+xmessage*Text.?.cursorColor:        rgb:d/5/5
+xmessage*Text.borderColor:        gray65
+xmessage*Text*background:        white
+xmessage*Command.highlightThickness:    1
+xmessage*Command.internalWidth:        5
+xmessage*Command.internalHeight:    3
+xmessage*Command.borderColor:        #9191ff
+xmessage*Command.shapeStyle:        Rectangle
+xmessage*Command.background:        gray80
+!xmessage*font:                -*-fixed-*-*-*-*-12-*-*-*-*-*-*-*
+!xmessage*font:                -*-fixed-*-*-*-*-24-*-*-*-*-*-*-*
+xmessage*font:                -*-*-*-*-*-*-34-*-*-*-*-*-*-*
