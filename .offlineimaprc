@@ -24,3 +24,4 @@ remoteuser = taylor@codecafe.com
 remotepassfile = ~/.config/offlineimap/taylor.codecafe.com
 ssl = yes
 realdelete = no
+folderfilter = lambda foldername: foldername not in ['[Gmail]/Spam','[Gmail]/Trash']
