@@ -19,7 +19,9 @@ defbarpadding 0 0
 
 # fdump/frestore to save and restore current window layout
 
-bind L exec xlock
+#bind L exec xlock
+#bind L exec sh -c xtrlock
+bind L exec sh -c "$(which xtrlock)"
 bind B banish
 
 bind f exec firefox --remote "openurl(`ratpoison -c getsel`,new-tab)"
@@ -29,6 +31,10 @@ bind b exec ratpoison -c "echo `battery`"
 unbind w
 bind w exec $HOME/sw/bin/ratwindows
 
+definekey top M-Tab other
+
+#definekey top F12 exec $HOME/sw/bin/rpshowall.sh 2
+definekey top F12 exec $HOME/sw/bin/rpshowall.sh 0
 definekey top s-v ratclick 2
 definekey top s-d rathold down 1
 definekey top s-u rathold up 1
@@ -36,6 +42,7 @@ definekey top s-l ratrelwarp 5 0
 definekey top s-h ratrelwarp -5 0
 definekey top s-k ratrelwarp 0 -5 
 definekey top s-j ratrelwarp 0 5 
+
 
 #definekey top s-Right gnext
 #definekey top s-Left gprev

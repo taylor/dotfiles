@@ -13,15 +13,15 @@ set select_exec ratpoison -c "select %i"
 
 # Set VI keybindings, with arrow keys
 # note: this is the default
-bind h		left
-bind j		down
-bind k		up
-bind l		right
-bind q 		quit
-bind Escape	quit
-#bind Escape	escape
-bind space	select
-bind Return	select
+bind h    left
+bind j    down
+bind k    up
+bind l    right
+bind q     quit
+bind Escape  quit
+#bind Escape  escape
+bind space  select
+bind Return  select
 
 # And you can launch programs from RpExpose!
 bind m exec ratpoison -c "echo You pressed the M key!"
