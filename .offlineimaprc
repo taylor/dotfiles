@@ -1,23 +1,43 @@
-# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
-# suit to get started fast.
-
 [general]
-accounts = CodeCafe
+accounts = CodeCafe, FastMail
 metadata = ~/Mail/.offlineimap
-maxsyncaccounts = 1
+maxsyncaccounts = 2
 
-#ui = Curses.Blinkenlights, TTY.TTYUI,
+#ui = Curses.Blinkenlights, TTY.TTYUI, Machine.MachineUI
 ui = TTY.TTYUI, Noninteractive.Basic, Noninteractive.Quiet
+#ui = Machine.MachineUI, Noninteractive.Basic, Noninteractive.Quiet
+#ui = Noninteractive.Basic, Noninteractive.Quiet
 
 [Account CodeCafe]
-localrepository = Local
-remoterepository = Remote
+localrepository = LocalCC
+remoterepository = RemoteCC
 
-[Repository Local]
+[Account FastMail]
+localrepository = LocalFM
+remoterepository = RemoteFM
+
+[Repository LocalFM]
+type = Maildir
+localfolders = ~/Mail/fastmail
+#subscribedonly = no
+#sep = /
+
+[Repository RemoteFM]
+type = IMAP
+remotehost = mail.messagingengine.com
+remoteuser = taylor@sent.com
+remotepassfile = ~/.config/offlineimap/taylor.fastmail.fm
+ssl = yes
+expunge = no
+folderfilter = lambda foldername: foldername not in ['INBOX.Trash']
+#folderfilter = lambda foldername: foldername not in ['[Gmail]/Spam','[Gmail]/Trash']
+maxconnections = 3
+
+[Repository LocalCC]
 type = Maildir
 localfolders = ~/Mail/codecafe
 
-[Repository Remote]
+[Repository RemoteCC]
 type = Gmail
 remotehost = imap.googlemail.com
 remoteuser = taylor@codecafe.com
