@@ -6,7 +6,11 @@ defhstatus "screen ^A (^Aa) | $USER@^AH"
 hardstatus off
 
 #caption always "%{Yk} %H %0c:%s %{k}|%{G} %l %{k}|%{W} %-w%{+u}%n %t%{-u}%+w"
+# white and yellow with blink on non-16color
 caption always "%{Yk} %H%{k}|%{W}%-w%{+u}%n %t%{-u}%+w"
+# green and red
+caption string "%{yk}%H %{Kk}%{g}%-w%{kR}%n %t%{Kk}%{g}%+w"
+
 #caption always
 #caption string "%{Yk}%H %{Kk}%-w%{kR}%n %t%{-}%+w"
 #
