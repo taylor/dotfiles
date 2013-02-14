@@ -1,0 +1,41 @@
+########################################################################
+### What Ruby to use...
+if [ -z "$RUBYWRAPPER" ] ; then
+  #RUBYWRAPPER=system
+  #RUBYWRAPPER=opscode
+  RUBYWRAPPER=rvm
+  #RUBYWRAPPER=rbenv
+fi
+case $RUBYWRAPPER in
+  rvm)
+    if [ -s "$HOME/.rvm/scripts/rvm" ] ; then
+      [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+      [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # Auto complete on command line for rvm
+    elif [ -s "/etc/profile.d/rvm.sh" ] ; then
+      source "/etc/profile.d/rvm.sh" # Load RVM into a shell session *as a function*
+      [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # Auto complete on command line for rvm
+    else
+      echo "RVM does not seem to be installed!"
+    fi  
+    ;;  
+  rbenv)
+    if [ -s "$HOME/.rbenv/bin/rbenv" ] ; then
+      PATH=$HOME/.rbenv/bin:$PATH
+      _vecho -n "rbenv init... "
+      eval "$(rbenv init -)"
+      _vecho "done"
+    else
+      echo "rbenv does not seem to be installed!"
+    fi
+    ;;
+  system)
+    true
+    ;;
+  opscode)
+    PATH=/opt/chef/embedded/bin:$PATH
+    ;;
+  *)
+    echo "No known ruby wrapper.  Using system defaults"
+    ;;
+esac
+########################################################################

@@ -1,0 +1,8 @@
+# vim:ft=sh:
+
+enable_verbose_login() { sed -i.bak 's/^VERBOSE_LOGIN=.*/VERBOSE_LOGIN=1/' $HOME/.bash_profile ; }
+disable_verbose_login() { sed -i.bak 's/^VERBOSE_LOGIN=.*/VERBOSE_LOGIN=0/' $HOME/.bash_profile ; }
+
+function music() {
+  tmux at -t music 2> /dev/null || tmux new -s music "mocp ~/Music"
+}

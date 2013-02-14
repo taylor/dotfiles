@@ -1,0 +1,10 @@
+#!/bin/bash
+# vim:ft=sh:
+#http://www.funtoo.org/wiki/Keychain
+
+if [ ! -x "`which keychain 2> /dev/null`" ] ; then
+	return
+fi
+
+unset SSH_ASKPASS
+eval `keychain --eval --agents ssh,gpg --inherit any`

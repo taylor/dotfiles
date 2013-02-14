@@ -1,0 +1,28 @@
+# vim:ft=sh:
+
+alias be='bundle exec'
+#alias tree="tree -C -L 3 -h -F"
+#alias gf="git flow"
+
+#alias t=tmux
+#alias ta='tmux at'
+#alias tn='tmux new'
+#alias tnt='tmux new -t'
+
+alias ports.listen='lsof -i -nP | grep "(LISTEN)"'
+alias sports.listen='sudo lsof -i -nP | grep "(LISTEN)"'
+
+#alias rbenv-update='(cd ~/.rbenv/plugins/ruby-build && git pull)'
+
+alias tmux="tmux -2 -u"
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+alias tm="dtach -A ~/.dtach.mail mutt"
