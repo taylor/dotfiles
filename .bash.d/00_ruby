@@ -6,7 +6,11 @@ if [ -z "$RUBYWRAPPER" ] ; then
   #RUBYWRAPPER=opscode
   RUBYWRAPPER=rvm
   #RUBYWRAPPER=rbenv
+
+  # TODO: add the ability to list choices in first-to last preference then search for them
+  #    example RUBYWRAPPER=rvm,rbenv,opscode,system
 fi
+
 case $RUBYWRAPPER in
   rvm)
     if [ -s "$HOME/.rvm/scripts/rvm" ] ; then

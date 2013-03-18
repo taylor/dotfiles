@@ -41,3 +41,5 @@ fi
 PATH=$HOME/bin:$PATH
 
 export EDITOR PATH
+
+export BROWSER=$HOME/bin/sensible-browser

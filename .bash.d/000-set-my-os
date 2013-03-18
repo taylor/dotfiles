@@ -1,0 +1,22 @@
+# vim:ft=sh:
+
+SYSTYPE=$(uname -s)
+
+if [ "$SYSTYPE" = "Linux" ] ; then
+  [[ -f /etc/redhat-release ]] && REDHAT=1
+  [[ -f /etc/debian_version ]] && DEBIAN=1
+  [[ -f /etc/arch-release ]] && ARCHLINUX=1
+
+  if [ "$REDHAT$DEBIAN$ARCHLINUX" = "11" -o \
+       "$REDHAT$DEBIAN$ARCHLINUX" = "111" ] ; then
+    echo "This system shows signs of being converted from one OS to another"
+  else
+    [[ -n "$REDHAT" ]] && MYOS="redhat"
+    [[ -n "$DEBIAN" ]] && MYOS="debian"
+    [[ -n "$ARCHLINUX" ]] && MYOS="archlinux"
+  fi
+elif [ "$SYSTYPE" = "Darwin" ] ; then
+  MYOS="osx"
+fi
+
+export MYOS
