@@ -37,9 +37,14 @@ if [ -f ~/.bashrc ]; then
 fi
 
 
+export BROWSER=$HOME/bin/sensible-browser
+
+export GOPATH=$HOME/p/g
+PATH=${GOPATH}/bin:$PATH
+
 # I want my bin dir at the front *always*
 PATH=$HOME/bin:$PATH
 
 export EDITOR PATH
 
-export BROWSER=$HOME/bin/sensible-browser
+export MUTTJUMP_INDEXER=notmuch
