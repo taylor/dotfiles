@@ -38,7 +38,7 @@ _vecho -n "Loading ~/.bash.d/*..."
 shopt -s nullglob
 for s in $HOME/.bash.d/*
 do
-  source $s
+  [[ -f "$s" ]] && source $s
 done
 shopt -u nullglob
 _vecho "done"
