@@ -10,6 +10,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #export LANG=C
 
+export GPG_KEY_ID=626916EB
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc

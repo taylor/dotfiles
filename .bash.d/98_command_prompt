@@ -140,6 +140,9 @@ function prompt_func() {
 #else
 
 case "$TERM" in 
+  #screen)
+  #  PROMPT_COMMAND="prompt_func dumbcolor"
+  #  ;;
   xterm*|rxvt*|screen*|*color*|eterm)
     PROMPT_COMMAND="prompt_func"
     ;;

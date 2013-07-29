@@ -7,4 +7,4 @@ if [ ! -x "`which keychain 2> /dev/null`" ] ; then
 fi
 
 unset SSH_ASKPASS
-eval `keychain --eval --agents ssh,gpg --inherit any`
+eval `keychain --quick --eval --ignore-missing --noask --agents ssh,gpg --inherit any $GPG_KEY_ID`
