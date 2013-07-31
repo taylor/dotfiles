@@ -3,25 +3,6 @@
 enable_verbose_login() { sed -i.bak 's/^VERBOSE_LOGIN=.*/VERBOSE_LOGIN=1/' $HOME/.bash_profile ; }
 disable_verbose_login() { sed -i.bak 's/^VERBOSE_LOGIN=.*/VERBOSE_LOGIN=0/' $HOME/.bash_profile ; }
 
-function music() {
-  [[ -z "$MUSIC_PLAYER" ]] && MUSIC_PLAYER=mocp
-  [[ -n $1 ]] &&
-    case $1 in
-      exit|stop)
-        $MUSIC_PLAYER -x 2> /dev/null # FIXME: make it cross player
-        return
-      ;;
-      dev|device)
-        echo "Using device $2"
-        music exit
-        echo "starting server with: ALSAPCM=\"$2\" $MUSIC_PLAYER -S 2> /dev/null"
-        ALSAPCM="$2" $MUSIC_PLAYER -S 2> /dev/null
-      ;;
-      *) echo Unknown action $1 ; return ;;
-    esac
-  tmux at -t music 2> /dev/null || tmux new -s music "$MUSIC_PLAYER ~/Music"
-}
-
 function com() {
   tmux at -t com 2> /dev/null || tmux new -s com
 }

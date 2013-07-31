@@ -48,3 +48,5 @@ PATH=$HOME/bin:$PATH
 export EDITOR PATH
 
 export MUTTJUMP_INDEXER=notmuch
+
+#export SDL_AUDIODRIVER=pulse
