@@ -50,3 +50,5 @@ export EDITOR PATH
 export MUTTJUMP_INDEXER=notmuch
 
 #export SDL_AUDIODRIVER=pulse
+export XDG_CONFIG_HOME=$HOME/.config
+
