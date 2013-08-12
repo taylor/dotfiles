@@ -17,6 +17,7 @@ XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
 !XTerm*faceName: Inconsolata
 !XTerm*faceName: DejaVu Sans Mono0
 !XTerm*faceName: Pragmata
+XTerm*termName: xterm-256color
 XTerm*faceSize: 14
 XTerm*faceSize1: 10
 XTerm*faceSize2: 12
@@ -33,6 +34,7 @@ XTerm*loginShell: True
 XTerm*scrollBar: True
 XTerm*altSendsEscape: True
 XTerm*saveLines: 10000
+XTerm*rightScrollBar: true
 fluxbox*font: 10x20
 !XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
 !XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
@@ -101,3 +103,24 @@ urxvt*background: rgba:0000/0000/0000/dddd
 !!xmessage*font:                -*-fixed-*-*-*-*-24-*-*-*-*-*-*-*
 !xmessage*font:                -*-fixed-*-*-*-*-34-*-*-*-*-*-*-*
 !!xmessage*font:                -*-*-*-*-*-*-34-*-*-*-*-*-*-*
+
+!*color5:    rgb:96/3c/59
+!*color6:     rgb:41/81/79
+!*color7:     rgb:be/be/be
+! ZenBurn - http://xcolors.net/dl/zenburn
+*color0:  #1E2320
+*color1:  #705050
+*color2:  #60b48a
+*color3:  #dfaf8f
+*color4:  #506070
+*color5:  #dc8cc3
+*color6:  #8cd0d3
+*color7:  #dcdccc
+*color8:  #709080
+*color9:  #dca3a3
+*color10: #c3bf9f
+*color11: #f0dfaf
+*color12: #94bff3
+*color13: #ec93d3
+*color14: #93e0e3
+*color15: #ffffff
