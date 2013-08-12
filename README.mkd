@@ -1,0 +1,3 @@
+# dotfiles
+
+Symlink, copy in place, or use some fancy installer thing :P

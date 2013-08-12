@@ -13,16 +13,17 @@ XTerm*cursorBlink: True
 
 
 xterm*utf8: 1
-XTerm*faceName: DejaVu Sans Mono
+XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
 !XTerm*faceName: Inconsolata
+!XTerm*faceName: DejaVu Sans Mono0
 !XTerm*faceName: Pragmata
 XTerm*faceSize: 14
 XTerm*faceSize1: 10
 XTerm*faceSize2: 12
 XTerm*faceSize3: 14
-XTerm*faceSize4: 16
-XTerm*faceSize5: 18
-XTerm*faceSize6: 24
+XTerm*faceSize4: 18
+XTerm*faceSize5: 24
+XTerm*faceSize6: 28
 !XTerm*font: 10x20
 XTerm*foreground: white
 XTerm*background: black

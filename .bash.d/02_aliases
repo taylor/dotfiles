@@ -27,3 +27,4 @@ alias be='bundle exec'
 #alias rbenv-update='(cd ~/.rbenv/plugins/ruby-build && git pull)'
 #alias gf="git flow"
 
+alias view="vim -R"
