@@ -1,0 +1,3 @@
+[submodule "screenlayout"]
+	path = .screenlayout
+	url = git@github.com:/taylor/.screenlayout.git
