@@ -1,0 +1,100 @@
+*ttyModes: erase ^?
+
+! see "font4" in /usr/share/X11/app-defaults/XTerm
+!*font                         : -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
+!
+XTerm*cursorBlink: True
+!XTerm*font: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+!XTerm*font: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!XTerm*font: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+!XTerm*font: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+
+
+xterm*utf8: 1
+XTerm*faceName: DejaVu Sans Mono
+!XTerm*faceName: Inconsolata
+!XTerm*faceName: Pragmata
+XTerm*faceSize: 14
+XTerm*faceSize1: 10
+XTerm*faceSize2: 12
+XTerm*faceSize3: 14
+XTerm*faceSize4: 16
+XTerm*faceSize5: 18
+XTerm*faceSize6: 24
+!XTerm*font: 10x20
+XTerm*foreground: white
+XTerm*background: black
+XTerm*VT100*geometry: 81x21
+XTerm*PopOnBell: False
+XTerm*loginShell: True
+XTerm*scrollBar: True
+XTerm*altSendsEscape: True
+XTerm*saveLines: 10000
+fluxbox*font: 10x20
+!XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+!XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+!XTerm*font3: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+!XTerm*font4: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!XTerm*font5: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!XTerm*font6: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+!XTerm*font1: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+!XTerm*font2: -adobe-courier-bold-r-normal--14-100-100-100-m-90-iso8859-1
+!XTerm*font3: -adobe-courier-bold-r-normal--17-120-100-100-m-100-iso8859-1
+!XTerm*font4: -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-1
+!XTerm*font5: -adobe-courier-bold-r-normal--25-180-100-100-m-150-iso8859-1
+!XTerm*font6: -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso8859-1
+aterm.geometry: 91x37
+aterm.font:  -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+aterm.font1: fixed
+aterm.font2: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+aterm.font3: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+aterm.font4: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+*VT100*translations:    #override \n\
+	<Btn4Down>,<Btn4Up>: string("") \n\
+	<Btn5Down>,<Btn5Up>: string("") \n\
+	Ctrl<Key>=: larger-vt-font() \n\
+	Ctrl<Key>-: smaller-vt-font()
+
+XTerm*metaSendsEscape:	True
+
+
+! ! enable colors in native X applications
+#ifdef COLOR
+ *customization                : -color
+#endif
+
+Xcursor.theme                 : Human
+
+URxvt.urgentOnBell: true
+XTerm.urgentOnBell: true
+
+rxvt*rightScrollBar: True
+rxvt*background:       black
+rxvt*foreground:       white
+urxvt*rightScrollBar: True
+!urxvt*background:       black
+!urxvt*foreground:       white
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0000/dddd
+
+!xmessage*form.okay.shapeStyle:        rectangle
+!xmessage*form.okay.background:        black
+!xmessage*form.okay.foreground:        white
+!xmessage*message*background:        black
+!xmessage*background:            #111122
+!xmessage*foreground:            white
+!xmessage*Scrollbar.width:        1
+!xmessage*Scrollbar.borderWidth:        0
+!xmessage*Text.?.cursorColor:        rgb:d/5/5
+!xmessage*Text.borderColor:        gray65
+!xmessage*Text*background:        white
+!xmessage*Command.highlightThickness:    1
+!xmessage*Command.internalWidth:        5
+!xmessage*Command.internalHeight:    3
+!xmessage*Command.borderColor:        #9191ff
+!xmessage*Command.shapeStyle:        Rectangle
+!xmessage*Command.background:        gray80
+!!xmessage*font:                -*-fixed-*-*-*-*-12-*-*-*-*-*-*-*
+!!xmessage*font:                -*-fixed-*-*-*-*-24-*-*-*-*-*-*-*
+!xmessage*font:                -*-fixed-*-*-*-*-34-*-*-*-*-*-*-*
+!!xmessage*font:                -*-*-*-*-*-*-34-*-*-*-*-*-*-*
