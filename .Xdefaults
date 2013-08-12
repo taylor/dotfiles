@@ -1,3 +1,5 @@
+! See https://wiki.archlinux.org/index.php/X_resources
+
 *ttyModes: erase ^?
 
 ! see "font4" in /usr/share/X11/app-defaults/XTerm
