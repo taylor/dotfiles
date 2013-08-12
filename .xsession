@@ -4,9 +4,11 @@
 
 #xsetroot
 # Set background
-BACKGROUND=""
+BACKGROUND="/home/taylor/Pictures/backgrounds/nightfall_skyline-wallpaper-2560x1440.jpg"
 if [ -n "$BACKGROUND" ] ; then
-  if [ -x `which qiv` ] ; then
+  if [ -x `which feh` ] ; then
+    feh  --image-bg black --bg-center "$BACKGROUND"
+  elif [ -x `which qiv` ] ; then
     qiv -z "$BACKGROUND"
   elif [ -x `which awsetbg` ] ; then
     awsetbg "$BACKGROUND"
@@ -123,5 +125,10 @@ notify-listener.py &
 
 start-pulseaudio-x11 &
 pasystray &
+
+# Composite Manager
+#unagi &
+cairo-compmgr &
+#xcompmgr -cF &
 
 exec awesome
