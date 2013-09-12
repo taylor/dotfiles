@@ -6,3 +6,7 @@ disable_verbose_login() { sed -i.bak 's/^VERBOSE_LOGIN=.*/VERBOSE_LOGIN=0/' $HOM
 function com() {
   tmux at -t com 2> /dev/null || tmux new -s com
 }
+
+function work() {
+ tmux attach -t $@ || tmux new -s $@
+}
