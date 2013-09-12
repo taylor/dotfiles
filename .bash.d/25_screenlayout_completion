@@ -1,0 +1,19 @@
+# vim:ft=sh:
+# START screenlayout completion
+# Usage: Put "source bash_completion_screenlayout.sh" into your .bashrc
+_screenlayout() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    
+    opts="$(cd ~/.screenlayout && ls *.sh| sed 's/.sh//')" 
+
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))  
+    return 0
+
+}
+complete -F _screenlayout screenlayout
+
+# END screenlayout completion
