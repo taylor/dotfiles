@@ -1,0 +1,19 @@
+# vim:ft=sh:
+# START toggle completion
+# Usage: Put "source bash_completion_toggle.sh" into your .bashrc
+_toggle() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    
+    opts="$(cd ~/bin && ls toggle-*| sed 's/toggle-//')" 
+
+    COMPREPLY=($(compgen -W "${opts}" -- ${cur}))  
+    return 0
+
+}
+complete -F _toggle toggle
+
+# END toggle completion
