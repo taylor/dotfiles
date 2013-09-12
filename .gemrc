@@ -3,8 +3,8 @@
 :update_sources: true
 :verbose: true
 :backtrace: false
-:sources: 
-- https://gems.rubyforge.org/
-- https://gems.github.com
+#:sources: 
+#- https://gems.rubyforge.org/
+#- https://gems.github.com
 :bulk_threshold: 1000
-#gem: --no-ri --no-rdoc
+gem: --no-ri --no-rdoc

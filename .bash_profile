@@ -52,3 +52,4 @@ export MUTTJUMP_INDEXER=notmuch
 #export SDL_AUDIODRIVER=pulse
 export XDG_CONFIG_HOME=$HOME/.config
 
+#[[ -f /opt/chef/bin/chef-client ]] && export PATH=/opt/chef/bin:$PATH && echo "chef from /opt/chef in use"

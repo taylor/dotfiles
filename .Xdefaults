@@ -13,9 +13,9 @@ XTerm*cursorBlink: True
 
 
 xterm*utf8: 1
-XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
+!XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
 !XTerm*faceName: Inconsolata
-!XTerm*faceName: DejaVu Sans Mono0
+XTerm*faceName: DejaVu Sans Mono0
 !XTerm*faceName: Pragmata
 XTerm*termName: xterm-256color
 XTerm*faceSize: 14

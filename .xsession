@@ -7,7 +7,11 @@
 BACKGROUND="/home/taylor/Pictures/backgrounds/nightfall_skyline-wallpaper-2560x1440.jpg"
 if [ -n "$BACKGROUND" ] ; then
   if [ -x `which feh` ] ; then
-    feh  --image-bg black --bg-center "$BACKGROUND"
+    if [ -f $HOME/.fehbg ] ; then
+      sh $HOME/.fehbg
+    else
+      feh  --image-bg black --bg-center "$BACKGROUND"
+    fi
   elif [ -x `which qiv` ] ; then
     qiv -z "$BACKGROUND"
   elif [ -x `which awsetbg` ] ; then
@@ -124,11 +128,15 @@ redshiftgui &
 notify-listener.py &
 
 start-pulseaudio-x11 &
-pasystray &
+#pasystray &
+pnmixer &
 
 # Composite Manager
-#unagi &
-cairo-compmgr &
-#xcompmgr -cF &
+unagi &
+#cairo-compmgr &
+#xcompmgr -cC &
+#xcompmgr -c &
+
+xautolock -locker lockscreen -time 15 &
 
 exec awesome

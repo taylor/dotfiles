@@ -54,3 +54,13 @@ fi
 if [ -n "$DISPLAY" -a -n "$XBROWSER" ] ; then
   export BROWSER=$XBROWSER
 fi
+
+case $TERM in
+  *screen*|dumb)
+    true
+    ;;
+  *)
+    QUIET=1 ~/bin/trans 0.9
+    ;;
+esac
+PATH=/home/taylor/.ghf/bin:$PATH
