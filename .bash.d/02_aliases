@@ -32,4 +32,5 @@ alias tmate="tmate -f $HOME/.tmux.conf-tmate"
 alias com="tmux attach -t com || tmux new -s com"
 
 alias emacs="emacs -nw"
-alias gl="git log --graph --abbrev-commit --pretty=oneline --decorate"
+alias gl="git lg"
+#alias gl="git log --graph --abbrev-commit --pretty=oneline --decorate"
