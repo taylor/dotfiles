@@ -1,0 +1,14 @@
+"2.0 (created: 2009/03/28 23:48:07)
+" vim: set ft=vimperator:
+"set guioptions=mT
+"set runtimepath=/home/taylor/.vimperator
+
+"au LocationChange .* :set editor="guieditor -f"
+"au LocationChange s\.codecafe\.com :set editor="guieditor -f -c 'set ft=mkd'"
+"au LocationChange trac\.isgenesis\.com :set editor="guieditor -f -c 'set ft=mkd'"
+
+" Save to Delicious
+map <Leader>S :open postdelicious<CR>
+" Add the delicious bookmarketlet then add postdelicious as the keyword
+map <Leader>K :open klip<CR>
+" Add the klip.me bookmarketlet then add klip as the keyword
