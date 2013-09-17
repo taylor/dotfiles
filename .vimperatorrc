@@ -1,5 +1,5 @@
-"2.0 (created: 2009/03/28 23:48:07)
 " vim: set ft=vimperator:
+
 "set guioptions=mT
 "set runtimepath=/home/taylor/.vimperator
 
@@ -10,5 +10,13 @@
 " Save to Delicious
 map <Leader>S :open postdelicious<CR>
 " Add the delicious bookmarketlet then add postdelicious as the keyword
-map <Leader>K :open klip<CR>
+" Send to Kindle via klip.me
+map <Leader>K :open sendtokindle<CR>
 " Add the klip.me bookmarketlet then add klip as the keyword
+" Save to Pocket <http://getpocket.com>
+map <Leader>P :open addtopocket<CR>
+" Add the getpocket.com bookmarketlet then add addtopocket as the keyword
+
+
+
+source! /home/taylor/.vimperatorrc.local
