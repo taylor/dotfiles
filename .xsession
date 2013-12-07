@@ -9,6 +9,7 @@ if [ -n "$BACKGROUND" ] ; then
   if [ -x `which feh` ] ; then
     if [ -f $HOME/.fehbg ] ; then
       sh $HOME/.fehbg
+      (sleep 60 ; sh $HOME/.fehbg ) &
     else
       feh  --image-bg black --bg-center "$BACKGROUND"
     fi
@@ -132,7 +133,7 @@ start-pulseaudio-x11 &
 pnmixer &
 
 # Composite Manager
-unagi &
+#unagi &
 #cairo-compmgr &
 #xcompmgr -cC &
 #xcompmgr -c &

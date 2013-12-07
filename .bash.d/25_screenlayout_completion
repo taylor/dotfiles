@@ -14,6 +14,6 @@ _screenlayout()
     return 0
 
 }
-complete -F _screenlayout screenlayout
+complete -F _screenlayout screen-layout
 
 # END screenlayout completion

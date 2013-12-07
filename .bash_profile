@@ -18,10 +18,12 @@ export HISTCONTROL HISTSIZE HISTFILESIZE
 # User specific environment and startup programs
 unset USERNAME
 
+. /etc/profile
+
 PATH=/sbin:/usr/sbin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
-PATH=$PATH:/usr/bin/vendor_perl
-PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin
+#PATH=$PATH:/usr/bin/vendor_perl
+#PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin
 
 CLICOLOR=1
 
@@ -53,3 +55,5 @@ export MUTTJUMP_INDEXER=notmuch
 export XDG_CONFIG_HOME=$HOME/.config
 
 #[[ -f /opt/chef/bin/chef-client ]] && export PATH=/opt/chef/bin:$PATH && echo "chef from /opt/chef in use"
+
+ulimit -n 4096
