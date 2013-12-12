@@ -47,9 +47,27 @@ function git_cwd_info() {
     fi
 
     git_status="$(git status 2> /dev/null)"
-    branch_pattern="^# On branch ([^${IFS}]*)"
-    remote_pattern="# Your branch is (.*) of"
-    diverge_pattern="# Your branch and (.*) have diverged"
+
+    git_version=`git --version|awk '{print $3}'`
+
+    OLDIFS=$IFS
+    IFS="."
+    set -- $git_version
+    git_major_version="$1"
+    git_minor_version="$2"
+    git_patch_version="$3"
+    IFS=$OLDIFS
+
+    if (( $git_minor_version > 8 || ($git_minor_version == 8 && $git_patch_version > 4) )) ; then
+      branch_pattern="^On branch ([^${IFS}]*)"
+      remote_pattern="Your branch is (.*) of"
+      diverge_pattern="Your branch and (.*) have diverged"
+    else
+      branch_pattern="^# On branch ([^${IFS}]*)"
+      remote_pattern="# Your branch is (.*) of"
+      diverge_pattern="# Your branch and (.*) have diverged"
+    fi
+
     unstaged_changes="Changes not staged for commit"
 
     GIT_DIRTY=""
