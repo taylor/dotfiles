@@ -8,5 +8,11 @@ function com() {
 }
 
 function work() {
- tmux attach -t $@ || tmux new -s $@
+ if [ -z "$1" ] ; then
+  s="work"
+ else
+  s="$1"
+  shift
+ fi
+ tmux attach -t $s $@ || tmux new -s $s $@
 }

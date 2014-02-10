@@ -138,6 +138,10 @@ pnmixer &
 #xcompmgr -cC &
 #xcompmgr -c &
 
+
+
 xautolock -locker lockscreen -time 15 &
+
+[ ! -s ~/.config/mpd/pid ] && mpd &
 
 exec awesome

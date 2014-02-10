@@ -6,6 +6,8 @@ function _vecho() { if [ "${VERBOSE_LOGIN}" = 1 ] ; then echo $* ; fi ; }
 
 ########################################################################
 
+. /etc/profile
+
 EDITOR=vim
 
 HISTCONTROL=ignoreboth
@@ -17,8 +19,6 @@ export HISTCONTROL HISTSIZE HISTFILESIZE
 
 # User specific environment and startup programs
 unset USERNAME
-
-. /etc/profile
 
 PATH=/sbin:/usr/sbin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -57,3 +57,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 #[[ -f /opt/chef/bin/chef-client ]] && export PATH=/opt/chef/bin:$PATH && echo "chef from /opt/chef in use"
 
 ulimit -n 4096
+#[ ! -s ~/.config/mpd/pid ] && mpd
+
+export MUSIC_PLAYER=vimpc
+#export MUSIC_PLAYER=mocp
+
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
