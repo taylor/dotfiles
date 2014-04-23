@@ -124,3 +124,6 @@ urxvt*background: rgba:0000/0000/0000/dddd
 *color13: #ec93d3
 *color14: #93e0e3
 *color15: #ffffff
+
+xscreensaver.Dialog.headingFont: -*-fixed-bold-r-*-*-*-100-*-*-*-*-iso8859-1
+

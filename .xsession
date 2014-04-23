@@ -112,6 +112,7 @@ syndaemon -t -k -i 2 -d &
 
 xinput set-prop 9 "Evdev Middle Button Emulation" 1
 
+mymsg "redshift starting"
 redshiftgui &
 
 # from https://awesome.naquadah.org/wiki/Quickly_Setting_up_Awesome_with_Gnome
@@ -139,7 +140,12 @@ pnmixer &
 #xcompmgr -c &
 
 
+mymsg "Starting srandrd to auto handle screen layout with screen-layout and autorandr"
+srandrd screen-layout auto &
 
+mymsg "Starting xscreensaver"
+xscreensaver -no-splash &
+mymsg "Starting xautolock using lockscreen with 15min timer"
 xautolock -locker lockscreen -time 15 &
 
 [ ! -s ~/.config/mpd/pid ] && mpd &
