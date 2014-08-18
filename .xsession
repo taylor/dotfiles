@@ -143,6 +143,9 @@ pnmixer &
 mymsg "Starting srandrd to auto handle screen layout with screen-layout and autorandr"
 srandrd screen-layout auto &
 
+mymsg "Starting copyq"
+copyq &
+
 mymsg "Starting xscreensaver"
 xscreensaver -no-splash &
 mymsg "Starting xautolock using lockscreen with 15min timer"
