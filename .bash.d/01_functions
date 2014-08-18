@@ -8,11 +8,18 @@ function com() {
 }
 
 function work() {
- if [ -z "$1" ] ; then
-  s="work"
- else
+ s="work"
+ if [ -n "$1" ] ; then
   s="$1"
   shift
  fi
  tmux attach -t $s $@ || tmux new -s $s $@
+}
+
+REAL_TMUX=$(which --skip-alias --skip-functions tmux)
+
+function tmux() {
+  env |grep -q /tmp/tmate
+  [[ "$?" = 0 ]] && TMUX=''
+  $REAL_TMUX -2 -u $*
 }

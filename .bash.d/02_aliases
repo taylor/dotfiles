@@ -16,7 +16,7 @@ fi
 alias tm="dtach -A ~/.dtach.mail mutt"
 alias vi="vim"
 
-alias tmux="tmux -2 -u"
+#alias tmux="tmux -2 -u"
 #alias t=tmux
 #alias ta='tmux at'
 #alias tn='tmux new'
