@@ -2,153 +2,212 @@
 
 *ttyModes: erase ^?
 
-
 ! magic for tmux https://code.launchpad.net/~per.j/iterm/xterm_set_selection
 ! man xterm (1)
 XTerm*disallowedWindowOps: 20,21,SetXprop
 
 xterm*utf8: true
 
-!XTerm*faceName: Inconsolata-g
-XTerm*faceName: Pragmata
-XTerm*faceSize: 10
-XTerm*background:                       grey13
-XTerm*foreground:                       grey75
-XTerm*cursorColor:                      darkorange1
-XTerm*scrollBar:                        false
-XTterm*utf8:                            2
-XTerm*metaSendsEscape: true
-XTerm*eightBitInput: false
-xterm*termName: xterm-color
-xterm*ttyModes: erase ^?
-xterm*VT100*translations:       #override \
-   <Key>BackSpace: string(0x7f)
-xterm*backarrowKeyIsErase:      true
+!--- START from wwalker on 2017-12-15 
 
-! see "font4" in /usr/share/X11/app-defaults/XTerm
-!*font                         : -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
-!
+xterm*utf8: 2
+*ttyModes: erase ^?
 XTerm*cursorBlink: True
-!XTerm*font: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
-!XTerm*font: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
-!XTerm*font: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+XTerm.VT100.color4: blue1
 !XTerm*font: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
-
-!XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
-XTerm*faceName: Inconsolata
-!XTerm*faceName: DejaVu Sans Mono0
-!XTerm*faceName: Pragmata
-XTerm*termName: xterm-256color
-XTerm*faceSize: 14
-XTerm*faceSize1: 10
-XTerm*faceSize2: 12
-XTerm*faceSize3: 14
-XTerm*faceSize4: 18
-XTerm*faceSize5: 24
-XTerm*faceSize6: 28
-XTerm*font: 10x20
-!-XTerm*foreground: white
-!-XTerm*background: black
-!-XTerm*VT100*geometry: 81x21
+!XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+!XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+!XTerm*font3: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+!XTerm*font4: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!XTerm*font5: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!XTerm*font6: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+!XTerm*faceName: Bitstream Vera Sans Mono
+XTerm*faceName: DejaVu Sans Mono for Powerline
+XTerm*faceSize: 12
+XTerm*faceSize1: 8
+XTerm*faceSize2: 10
+XTerm*faceSize3: 12
+XTerm*faceSize4: 14
+XTerm*faceSize5: 16
+XTerm*faceSize6: 18
+!XTerm*font: 10x20
+XTerm*foreground: white
+XTerm*background: black
+XTerm*VT100*geometry: 81x21
+!XTerm*maximized: true
 XTerm*PopOnBell: False
 XTerm*loginShell: True
 XTerm*scrollBar: True
 XTerm*altSendsEscape: True
 XTerm*saveLines: 10000
-XTerm*rightScrollBar: true
 fluxbox*font: 10x20
-!-!XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
-!-!XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
-!-!XTerm*font3: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
-!-!XTerm*font4: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
-!-!XTerm*font5: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
-!-!XTerm*font6: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
-!-!XTerm*font1: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
-!-!XTerm*font2: -adobe-courier-bold-r-normal--14-100-100-100-m-90-iso8859-1
-!-!XTerm*font3: -adobe-courier-bold-r-normal--17-120-100-100-m-100-iso8859-1
-!-!XTerm*font4: -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-1
-!-!XTerm*font5: -adobe-courier-bold-r-normal--25-180-100-100-m-150-iso8859-1
-!-!XTerm*font6: -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso8859-1
-aterm.geometry: 91x37
-aterm.font:  -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
-aterm.font1: fixed
-aterm.font2: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
-aterm.font3: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
-aterm.font4: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+XTerm*highlightSelection: true
+XTerm*metaSendsEscape:  True
 *VT100*translations:    #override \n\
-	<Btn4Down>,<Btn4Up>: string("") \n\
-	<Btn5Down>,<Btn5Up>: string("") \n\
-	Ctrl<Key>=: larger-vt-font() \n\
-	Ctrl<Key>-: smaller-vt-font()
+       <Btn4Down>,<Btn4Up>: string("") \n\
+       <Btn5Down>,<Btn5Up>: string("") \n\
+       Ctrl<Key>=: larger-vt-font() \n\
+       Ctrl<Key>-: smaller-vt-font()
 
-XTerm*metaSendsEscape:	True
+URxvt.perl-ext-common: default,font-size
+URxvt.keysym.C-minus:   font-size:decrease
+URxvt.keysym.C-equal:   font-size:increase
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.perl-lib: /usr/lib/urxvt/perl:/home/wwalker/bin
+URxvt.font:     xft:DejaVu Sans Mono:pixelsize=15
+URxvt.foreground: white
+URxvt.background: black
+URxvt.cursorColor: gray
+URxvt.VT100.color4: CornflowerBlue
+URxvt.color4: CornflowerBlue
+URxvt.cutchars: "\\`\"'%&()*,.;<>@[]{|}/-:=+"
+URxvt.loginShell: True
+URxvt.tripleclickwords: True
 
+!--- END from wwalker on 2017-12-15 
 
-! ! enable colors in native X applications
-#ifdef COLOR
- *customization                : -color
-#endif
-
-Xcursor.theme                 : Human
-
-URxvt.urgentOnBell: true
-XTerm.urgentOnBell: true
-
-rxvt*rightScrollBar: True
-rxvt*background:       black
-rxvt*foreground:       white
-urxvt*rightScrollBar: True
-!urxvt*background:       black
-!urxvt*foreground:       white
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0000/dddd
-
-!xmessage*form.okay.shapeStyle:        rectangle
-!xmessage*form.okay.background:        black
-!xmessage*form.okay.foreground:        white
-!xmessage*message*background:        black
-!xmessage*background:            #111122
-!xmessage*foreground:            white
-!xmessage*Scrollbar.width:        1
-!xmessage*Scrollbar.borderWidth:        0
-!xmessage*Text.?.cursorColor:        rgb:d/5/5
-!xmessage*Text.borderColor:        gray65
-!xmessage*Text*background:        white
-!xmessage*Command.highlightThickness:    1
-!xmessage*Command.internalWidth:        5
-!xmessage*Command.internalHeight:    3
-!xmessage*Command.borderColor:        #9191ff
-!xmessage*Command.shapeStyle:        Rectangle
-!xmessage*Command.background:        gray80
-!!xmessage*font:                -*-fixed-*-*-*-*-12-*-*-*-*-*-*-*
-!!xmessage*font:                -*-fixed-*-*-*-*-24-*-*-*-*-*-*-*
-!xmessage*font:                -*-fixed-*-*-*-*-34-*-*-*-*-*-*-*
-!!xmessage*font:                -*-*-*-*-*-*-34-*-*-*-*-*-*-*
-
-!*color5:    rgb:96/3c/59
-!*color6:     rgb:41/81/79
-!*color7:     rgb:be/be/be
-! ZenBurn - http://xcolors.net/dl/zenburn
-*color0:  #1E2320
-*color1:  #705050
-*color2:  #60b48a
-*color3:  #dfaf8f
-*color4:  #506070
-*color5:  #dc8cc3
-*color6:  #8cd0d3
-*color7:  #dcdccc
-*color8:  #709080
-*color9:  #dca3a3
-*color10: #c3bf9f
-*color11: #f0dfaf
-*color12: #94bff3
-*color13: #ec93d3
-*color14: #93e0e3
-*color15: #ffffff
-
-!XTerm.VT100.color4: CornflowerBlue
-XTerm.*.color4: CornflowerBlue
-!*.color4: CornflowerBlue
-
-xscreensaver.Dialog.headingFont: -*-fixed-bold-r-*-*-*-100-*-*-*-*-iso8859-1
-
+!--- DISABLED 2017-12-15 ----
+!DISABLED 2017-12-15!!XTerm*faceName: Inconsolata-g
+!DISABLED 2017-12-15!XTerm*faceName: Pragmata
+!DISABLED 2017-12-15!XTerm*faceSize: 10
+!DISABLED 2017-12-15!XTerm*background:                       grey13
+!DISABLED 2017-12-15!XTerm*foreground:                       grey75
+!DISABLED 2017-12-15!XTerm*cursorColor:                      darkorange1
+!DISABLED 2017-12-15!XTerm*scrollBar:                        false
+!DISABLED 2017-12-15!XTterm*utf8:                            2
+!DISABLED 2017-12-15!XTerm*metaSendsEscape: true
+!DISABLED 2017-12-15!XTerm*eightBitInput: false
+!DISABLED 2017-12-15!xterm*termName: xterm-color
+!DISABLED 2017-12-15!xterm*ttyModes: erase ^?
+!DISABLED 2017-12-15!xterm*VT100*translations:       #override \
+!DISABLED 2017-12-15!   <Key>BackSpace: string(0x7f)
+!DISABLED 2017-12-15!xterm*backarrowKeyIsErase:      true
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!! see "font4" in /usr/share/X11/app-defaults/XTerm
+!DISABLED 2017-12-15!!*font                         : -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
+!DISABLED 2017-12-15!!
+!DISABLED 2017-12-15!XTerm*cursorBlink: True
+!DISABLED 2017-12-15!!XTerm*font: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+!DISABLED 2017-12-15!!XTerm*font: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!DISABLED 2017-12-15!!XTerm*font: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+!DISABLED 2017-12-15!!XTerm*font: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!!XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
+!DISABLED 2017-12-15!XTerm*faceName: Inconsolata
+!DISABLED 2017-12-15!!XTerm*faceName: DejaVu Sans Mono0
+!DISABLED 2017-12-15!!XTerm*faceName: Pragmata
+!DISABLED 2017-12-15!XTerm*termName: xterm-256color
+!DISABLED 2017-12-15!XTerm*faceSize: 14
+!DISABLED 2017-12-15!XTerm*faceSize1: 10
+!DISABLED 2017-12-15!XTerm*faceSize2: 12
+!DISABLED 2017-12-15!XTerm*faceSize3: 14
+!DISABLED 2017-12-15!XTerm*faceSize4: 18
+!DISABLED 2017-12-15!XTerm*faceSize5: 24
+!DISABLED 2017-12-15!XTerm*faceSize6: 28
+!DISABLED 2017-12-15!XTerm*font: 10x20
+!DISABLED 2017-12-15!!-XTerm*foreground: white
+!DISABLED 2017-12-15!!-XTerm*background: black
+!DISABLED 2017-12-15!!-XTerm*VT100*geometry: 81x21
+!DISABLED 2017-12-15!XTerm*PopOnBell: False
+!DISABLED 2017-12-15!XTerm*loginShell: True
+!DISABLED 2017-12-15!XTerm*scrollBar: True
+!DISABLED 2017-12-15!XTerm*altSendsEscape: True
+!DISABLED 2017-12-15!XTerm*saveLines: 10000
+!DISABLED 2017-12-15!XTerm*rightScrollBar: true
+!DISABLED 2017-12-15!fluxbox*font: 10x20
+!DISABLED 2017-12-15!!-!XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font3: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font4: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font5: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font6: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font1: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font2: -adobe-courier-bold-r-normal--14-100-100-100-m-90-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font3: -adobe-courier-bold-r-normal--17-120-100-100-m-100-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font4: -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font5: -adobe-courier-bold-r-normal--25-180-100-100-m-150-iso8859-1
+!DISABLED 2017-12-15!!-!XTerm*font6: -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso8859-1
+!DISABLED 2017-12-15!aterm.geometry: 91x37
+!DISABLED 2017-12-15!aterm.font:  -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!DISABLED 2017-12-15!aterm.font1: fixed
+!DISABLED 2017-12-15!aterm.font2: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+!DISABLED 2017-12-15!aterm.font3: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!DISABLED 2017-12-15!aterm.font4: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!DISABLED 2017-12-15!*VT100*translations:    #override \n\
+!DISABLED 2017-12-15!	<Btn4Down>,<Btn4Up>: string("") \n\
+!DISABLED 2017-12-15!	<Btn5Down>,<Btn5Up>: string("") \n\
+!DISABLED 2017-12-15!	Ctrl<Key>=: larger-vt-font() \n\
+!DISABLED 2017-12-15!	Ctrl<Key>-: smaller-vt-font()
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!XTerm*metaSendsEscape:	True
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!! ! enable colors in native X applications
+!DISABLED 2017-12-15!#ifdef COLOR
+!DISABLED 2017-12-15! *customization                : -color
+!DISABLED 2017-12-15!#endif
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!Xcursor.theme                 : Human
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!URxvt.urgentOnBell: true
+!DISABLED 2017-12-15!XTerm.urgentOnBell: true
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!rxvt*rightScrollBar: True
+!DISABLED 2017-12-15!rxvt*background:       black
+!DISABLED 2017-12-15!rxvt*foreground:       white
+!DISABLED 2017-12-15!urxvt*rightScrollBar: True
+!DISABLED 2017-12-15!!urxvt*background:       black
+!DISABLED 2017-12-15!!urxvt*foreground:       white
+!DISABLED 2017-12-15!urxvt*depth: 32
+!DISABLED 2017-12-15!urxvt*background: rgba:0000/0000/0000/dddd
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!!xmessage*form.okay.shapeStyle:        rectangle
+!DISABLED 2017-12-15!!xmessage*form.okay.background:        black
+!DISABLED 2017-12-15!!xmessage*form.okay.foreground:        white
+!DISABLED 2017-12-15!!xmessage*message*background:        black
+!DISABLED 2017-12-15!!xmessage*background:            #111122
+!DISABLED 2017-12-15!!xmessage*foreground:            white
+!DISABLED 2017-12-15!!xmessage*Scrollbar.width:        1
+!DISABLED 2017-12-15!!xmessage*Scrollbar.borderWidth:        0
+!DISABLED 2017-12-15!!xmessage*Text.?.cursorColor:        rgb:d/5/5
+!DISABLED 2017-12-15!!xmessage*Text.borderColor:        gray65
+!DISABLED 2017-12-15!!xmessage*Text*background:        white
+!DISABLED 2017-12-15!!xmessage*Command.highlightThickness:    1
+!DISABLED 2017-12-15!!xmessage*Command.internalWidth:        5
+!DISABLED 2017-12-15!!xmessage*Command.internalHeight:    3
+!DISABLED 2017-12-15!!xmessage*Command.borderColor:        #9191ff
+!DISABLED 2017-12-15!!xmessage*Command.shapeStyle:        Rectangle
+!DISABLED 2017-12-15!!xmessage*Command.background:        gray80
+!DISABLED 2017-12-15!!!xmessage*font:                -*-fixed-*-*-*-*-12-*-*-*-*-*-*-*
+!DISABLED 2017-12-15!!!xmessage*font:                -*-fixed-*-*-*-*-24-*-*-*-*-*-*-*
+!DISABLED 2017-12-15!!xmessage*font:                -*-fixed-*-*-*-*-34-*-*-*-*-*-*-*
+!DISABLED 2017-12-15!!!xmessage*font:                -*-*-*-*-*-*-34-*-*-*-*-*-*-*
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!!*color5:    rgb:96/3c/59
+!DISABLED 2017-12-15!!*color6:     rgb:41/81/79
+!DISABLED 2017-12-15!!*color7:     rgb:be/be/be
+!DISABLED 2017-12-15!! ZenBurn - http://xcolors.net/dl/zenburn
+!DISABLED 2017-12-15!*color0:  #1E2320
+!DISABLED 2017-12-15!*color1:  #705050
+!DISABLED 2017-12-15!*color2:  #60b48a
+!DISABLED 2017-12-15!*color3:  #dfaf8f
+!DISABLED 2017-12-15!*color4:  #506070
+!DISABLED 2017-12-15!*color5:  #dc8cc3
+!DISABLED 2017-12-15!*color6:  #8cd0d3
+!DISABLED 2017-12-15!*color7:  #dcdccc
+!DISABLED 2017-12-15!*color8:  #709080
+!DISABLED 2017-12-15!*color9:  #dca3a3
+!DISABLED 2017-12-15!*color10: #c3bf9f
+!DISABLED 2017-12-15!*color11: #f0dfaf
+!DISABLED 2017-12-15!*color12: #94bff3
+!DISABLED 2017-12-15!*color13: #ec93d3
+!DISABLED 2017-12-15!*color14: #93e0e3
+!DISABLED 2017-12-15!*color15: #ffffff
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!!XTerm.VT100.color4: CornflowerBlue
+!DISABLED 2017-12-15!XTerm.*.color4: CornflowerBlue
+!DISABLED 2017-12-15!!*.color4: CornflowerBlue
+!DISABLED 2017-12-15!
+!DISABLED 2017-12-15!xscreensaver.Dialog.headingFont: -*-fixed-bold-r-*-*-*-100-*-*-*-*-iso8859-1
+!DISABLED 2017-12-15!
