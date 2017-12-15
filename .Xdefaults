@@ -2,6 +2,29 @@
 
 *ttyModes: erase ^?
 
+
+! magic for tmux https://code.launchpad.net/~per.j/iterm/xterm_set_selection
+! man xterm (1)
+XTerm*disallowedWindowOps: 20,21,SetXprop
+
+xterm*utf8: true
+
+!XTerm*faceName: Inconsolata-g
+XTerm*faceName: Pragmata
+XTerm*faceSize: 10
+XTerm*background:                       grey13
+XTerm*foreground:                       grey75
+XTerm*cursorColor:                      darkorange1
+XTerm*scrollBar:                        false
+XTterm*utf8:                            2
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
+xterm*termName: xterm-color
+xterm*ttyModes: erase ^?
+xterm*VT100*translations:       #override \
+   <Key>BackSpace: string(0x7f)
+xterm*backarrowKeyIsErase:      true
+
 ! see "font4" in /usr/share/X11/app-defaults/XTerm
 !*font                         : -*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*
 !
@@ -11,8 +34,6 @@ XTerm*cursorBlink: True
 !XTerm*font: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
 !XTerm*font: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
 
-
-xterm*utf8: 1
 !XTerm*font: -unknown-inconsolata-medium-r-normal--0-0-0-0-p-0-iso10646-1
 XTerm*faceName: Inconsolata
 !XTerm*faceName: DejaVu Sans Mono0
@@ -25,10 +46,10 @@ XTerm*faceSize3: 14
 XTerm*faceSize4: 18
 XTerm*faceSize5: 24
 XTerm*faceSize6: 28
-!XTerm*font: 10x20
-XTerm*foreground: white
-XTerm*background: black
-XTerm*VT100*geometry: 81x21
+XTerm*font: 10x20
+!-XTerm*foreground: white
+!-XTerm*background: black
+!-XTerm*VT100*geometry: 81x21
 XTerm*PopOnBell: False
 XTerm*loginShell: True
 XTerm*scrollBar: True
@@ -36,18 +57,18 @@ XTerm*altSendsEscape: True
 XTerm*saveLines: 10000
 XTerm*rightScrollBar: true
 fluxbox*font: 10x20
-!XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
-!XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
-!XTerm*font3: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
-!XTerm*font4: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
-!XTerm*font5: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
-!XTerm*font6: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
-!XTerm*font1: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
-!XTerm*font2: -adobe-courier-bold-r-normal--14-100-100-100-m-90-iso8859-1
-!XTerm*font3: -adobe-courier-bold-r-normal--17-120-100-100-m-100-iso8859-1
-!XTerm*font4: -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-1
-!XTerm*font5: -adobe-courier-bold-r-normal--25-180-100-100-m-150-iso8859-1
-!XTerm*font6: -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso8859-1
+!-!XTerm*font1: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+!-!XTerm*font2: -adobe-courier-medium-r-normal--14-100-100-100-m-90-iso8859-1
+!-!XTerm*font3: -adobe-courier-medium-r-normal--17-120-100-100-m-100-iso8859-1
+!-!XTerm*font4: -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
+!-!XTerm*font5: -adobe-courier-medium-r-normal--25-180-100-100-m-150-iso8859-1
+!-!XTerm*font6: -adobe-courier-medium-r-normal--34-240-100-100-m-200-iso8859-1
+!-!XTerm*font1: -adobe-courier-bold-r-normal--12-120-75-75-m-70-iso8859-1
+!-!XTerm*font2: -adobe-courier-bold-r-normal--14-100-100-100-m-90-iso8859-1
+!-!XTerm*font3: -adobe-courier-bold-r-normal--17-120-100-100-m-100-iso8859-1
+!-!XTerm*font4: -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-1
+!-!XTerm*font5: -adobe-courier-bold-r-normal--25-180-100-100-m-150-iso8859-1
+!-!XTerm*font6: -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso8859-1
 aterm.geometry: 91x37
 aterm.font:  -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1
 aterm.font1: fixed
@@ -124,6 +145,10 @@ urxvt*background: rgba:0000/0000/0000/dddd
 *color13: #ec93d3
 *color14: #93e0e3
 *color15: #ffffff
+
+!XTerm.VT100.color4: CornflowerBlue
+XTerm.*.color4: CornflowerBlue
+!*.color4: CornflowerBlue
 
 xscreensaver.Dialog.headingFont: -*-fixed-bold-r-*-*-*-100-*-*-*-*-iso8859-1
 
